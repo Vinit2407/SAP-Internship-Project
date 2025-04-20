@@ -1,0 +1,144 @@
+/* src/pages/SearchResults/SearchResults.css */
+.search-results {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .search-results h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .search-results-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .no-results { 
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
+  }
+  
+  .no-results p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .no-results p:last-child {
+    font-size: 16px;
+  }
+
+  .search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+  }
+  
+  .search-header h2 {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .search-back-button {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-back-button {
+    background: none;
+    border: none;
+    color: tomato;
+  }
+
+  .search-back-button img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* .cart-button {
+    background-color: tomato;
+    color: white;
+    border: none;
+  } */
+
+  .cart-button span {
+    display: inline;
+  }
+  
+  .cart-button:hover {
+    background-color: #ff4d4d;
+  } 
+
+  @media (max-width: 480px) {
+    .search-back-button{
+      margin-bottom: 20px;
+    }   
+    .cart-button img {
+      width: 20px;
+      height: 20px;
+    }
+    .search-back-button img{
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .cart-header {
+      flex-wrap: nowrap;
+    }
+
+    .search-header h2{
+      font-size: 14px;
+      align-items: flex-start;
+    }
+
+    .cart-button {
+      padding: 8px 10px;
+      font-size: 12px;
+      border-radius: 50px;
+      margin-bottom: 15px;
+    }
+  
+    .cart-button span {
+      display: none;
+    }
+  
+    .cart-button img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 900px){
+    .cart-button{
+      right: 20px;
+    }
+  }

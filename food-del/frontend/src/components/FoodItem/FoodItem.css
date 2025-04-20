@@ -1,0 +1,164 @@
+.food-item{
+    width: 100%;
+    /* max-width: 240px; */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item-image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info{
+    padding: 20px;
+}
+
+.food-item-name-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.food-item-name-rating p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img{
+    width: 70px;
+}
+
+.food-item-description{
+    color: #676767;
+    font-size: 12px;
+}
+
+.food-item-price{
+    color: rgb(237, 47, 13);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+.food-item-img-container{
+    position: relative;   
+}
+
+/* Add these styles to your existing FoodItem.css */
+
+.food-item-price-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.food-item-offer-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff4c24;
+}
+
+.food-item-original-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #9b9b9b;
+}
+
+.food-item-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: tomato;
+}
+
+/* .food-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-counter{
+    position: absolute;
+    border: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+} */
+
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2; /* Ensures it's above other elements */
+}
+
+.food-item-counter {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+    z-index: 2; /* Ensures it's above other elements */
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hide the counter initially and show it when an item is added */
+.food-item-counter.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.food-item-counter.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.food-item-counter img{
+    width: 30px;
+}
+
+@media (max-width: 768px) {
+    .food-item {
+      max-width: 180px;
+    }
+    
+    .food-item-name-rating p {
+      font-size: 16px;
+    }
+    
+    .food-item-price-container {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food-item {
+      max-width: 160px;
+    }
+    
+    .food-item-name-rating img {
+      width: 50px;
+    }
+  }

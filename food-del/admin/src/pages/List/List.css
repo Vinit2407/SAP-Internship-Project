@@ -1,0 +1,107 @@
+.list {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .list p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+  } 
+  
+  .list-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .list-table-format {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 50px 50px;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  .list-table-format.title {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .list-table-format img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .cursor {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cursor img {
+    width: 20px;
+    height: 20px;
+    /* opacity: 0.7; */
+    transition: opacity 0.2s;
+  }
+  
+  .cursor:hover img {
+    opacity: 1;
+  }
+  
+#edit{
+    padding-right: 25px;
+}
+
+  @media (max-width: 1000px) {
+    .list-table-format {
+      grid-template-columns: 50px 2fr 1fr 50px 50px;
+    padding: 12px 15px;
+    font-size: 13px;
+    gap: 15px;
+    grid-template-areas: 
+        "image name name edit delete"
+        "image category price edit delete";
+    }
+    
+    .list-table-format > *:nth-child(1) { grid-area: image; }
+    .list-table-format > *:nth-child(2) { grid-area: name; }
+    .list-table-format > *:nth-child(3) { grid-area: category; }
+    .list-table-format > *:nth-child(4) { grid-area: price; }
+    .list-table-format > *:nth-child(5) { display: none; }
+    .list-table-format > *:nth-child(6) { grid-area: edit; }
+    .list-table-format > *:nth-child(7) { grid-area: delete; }
+    
+    .list-table-format.title {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .list-table-format {
+      grid-template-columns: 50px 2fr 1fr 50px 50px;
+      font-size: 13px;
+    }
+    
+    .list-table-format.title {
+      display: none;
+    }
+  }
+
+  @media (max-width: 420px){
+    #edit{
+      padding-right: 1px;
+    }
+    #del{
+      padding-right: 40px;
+    }
+  }

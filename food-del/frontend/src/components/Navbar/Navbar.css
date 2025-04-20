@@ -1,0 +1,327 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    width: 150px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  /* .navbar-right button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  } */
+  
+  .sign-in:hover {
+    background-color: tomato;
+    color: white;
+    border: 1px solid #49557e;
+    transition: 0.3s;
+  }
+  .sign-in{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid #49557e;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  } 
+  .navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+  }
+  
+  .navbar li {
+    cursor: pointer;
+  }
+  
+  
+  /* .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+  }  */
+
+  .navbar-cart-icon .dot {
+    display: none; 
+  }
+
+  .navbar-cart-icon{
+    position: relative;
+  }
+
+  .cart-item-count {
+    transition: all 0.2s ease;
+    transform: scale(1);
+  }
+  
+  .cart-item-count:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .cart-item-count.added {
+    animation: pulse 0.5s ease;
+  }
+
+  .cart-item-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: tomato;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .search-container.active {
+    width: 200px; /* Fixed width when active */
+  }
+  
+  .navbar-search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .search-container:not(.active) .navbar-search-form {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .search-container.active .navbar-search-form {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar-search-form input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-search-form input:focus {
+    border-color: tomato;
+    /* box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.2); */
+  }
+
+  .navbar-search-form button:focus{
+    display: none;
+  }
+  
+  .search-submit {
+    background: none;
+    border: none;
+    margin-left: -45px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-container.active .search-toggle {
+    display: none;
+  }
+  
+  .navbar-profile {
+    position: relative;
+  }
+  
+  .profile-icon {
+    width: 28px;
+    height: 31px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-icon:hover, .profile-icon.active {
+    transform: scale(1.00);
+    box-shadow: 0 0 0 2px rgba(255, 99, 71, 0.3);
+  }
+  
+  .nav-profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    width: 200px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.2s ease-in-out;
+    border: 1px solid #eee;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-profile-dropdown li:hover {
+    background-color: #fff8f7;
+  }
+  
+  .nav-profile-dropdown li img {
+    width: 20px;
+    opacity: 0.8;
+  }
+  
+  .nav-profile-dropdown li p {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .nav-profile-dropdown li.logout-item {
+    border-top: 1px solid #f0f0f0;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-weight: 700;
+  }
+  
+  .nav-profile-dropdown li.logout-item img {
+    opacity: 1;
+    height: 25px;
+    width: 25px;
+  }
+  
+  .nav-profile-dropdown li.logout-item:hover {
+    color: tomato;
+  }
+  
+  .nav-profile-dropdown li.logout-item:hover img {
+    opacity: 1;
+  }
+  
+  @media (max-width:1050px) {
+    .navbar .logo {
+      width: 140px;
+    }
+    .navbar-menu {
+      gap: 20px;
+      font-size: 17px;
+    }
+    .navbar-right {
+      gap: 30px;
+    }
+    .navbar-right img {
+      width: 22px;
+    }
+    .navbar-right button {
+      padding: 8px 25px;
+    }
+  }
+  
+  @media (max-width:900px) {
+    .navbar .logo {
+      width: 120px;
+    }
+    .navbar-menu {
+      gap: 15px;
+      font-size: 16px;
+    }
+    .navbar-right {
+      gap: 20px;
+    }
+    .navbar-right img {
+      width: 20px;
+    }
+    .navbar-right button {
+      padding: 7px 20px;
+      font-size: 15px;
+    }
+    .navbar-profile img{
+      height: 21px;
+      width: 17px;
+    }
+  }
+  
+  @media (max-width:750px) {
+    .navbar-menu {
+      display: none;
+    }
+    .navbar-search-form img{
+        display: none;
+        border: none;
+        background: none;
+    }
+  }
