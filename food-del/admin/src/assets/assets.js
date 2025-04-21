@@ -18,4 +18,4 @@ export const assets ={
     edit_icon
 }
 
-export const url = 'http://localhost:4000'
+export const url = 'https://swigato-backend-25my.onrender.com'
