@@ -6,7 +6,7 @@ import PromoModel from "../models/promoCodeModel.js";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5174";
+  const frontend_url = "https://swigato-1crt.onrender.com";
   
   try {
     const user = await userModel.findById(req.user._id);
