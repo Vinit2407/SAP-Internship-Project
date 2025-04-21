@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header'
-import Exploremenu from '../../components/ExploreMenu/Exploremenu'
+import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import AppDownload from '../../components/AppDownload/AppDownload'
 import { StoreContext } from '../../context/StoreContext'
@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className='home'>
       <Header/>
-      <Exploremenu category={category} setCategory={setCategory}/>
+      <ExploreMenu category={category} setCategory={setCategory}/>
       <FoodDisplay category={category}/>
       <AppDownload/>
     </div>
