@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
   const [appliedPromo, setAppliedPromo] = useState(null);
   const [promoError, setPromoError] = useState("");
-  const url = "http://localhost:4000";
+  const url = "https://swigato-backend-25my.onrender.com";
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState([]);
   const [user, setUser] = useState(null);
