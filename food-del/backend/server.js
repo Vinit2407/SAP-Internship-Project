@@ -18,7 +18,7 @@ const port = process.env.PORT || 4000;
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: ['https://swigato-1crt.onrender.com', 'http://localhost:5173'],
+  origin: ['https://swigato-1crt.onrender.com', 'https://swigato-admin-rl6s.onrender.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'token', 'x-access-token']
