@@ -13,7 +13,7 @@ import './App.css'
 import Edit from './pages/Edit/Edit';
 
 const App = () => {
-  const url = "http://localhost:4000"
+  const url = "https://swigato-backend-25my.onrender.com"
   const { isAuthenticated, isLoading } = useAuth()
 
   if (isLoading) {
